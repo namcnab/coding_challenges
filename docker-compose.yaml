@@ -1,0 +1,14 @@
+services:
+  coding-challenge-service:
+    image: docker-coding-challenges
+    volumes:
+      - log-server:/app/logs
+    networks:
+      - efk-network
+
+volumes:
+  log-server:
+
+networks:
+  efk-network:
+    driver: bridge
